@@ -8,9 +8,9 @@ const makePromise = (delay, state) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {
-        resolve(`✅ Fulfilled promise in ${delay}ms`);
+        resolve(delay);
       } else {
-        reject(`❌ Rejected promise in ${delay}ms`);
+        reject(delay);
       }
     }, delay);
   });
@@ -25,7 +25,7 @@ form.addEventListener('submit', event => {
   )
     .then(value => {
       iziToast.success({
-        message: value,
+        message: `✅ Fulfilled promise in ${value}ms`,
         position: 'topRight',
         icon: '',
         backgroundColor: '#6fcf97',
@@ -38,7 +38,7 @@ form.addEventListener('submit', event => {
     })
     .catch(value => {
       iziToast.error({
-        message: value,
+        message: `❌ Rejected promise in ${value}ms`,
         position: 'topRight',
         icon: '',
         backgroundColor: '#eb5757',
