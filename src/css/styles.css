@@ -8,11 +8,175 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
 
 /* Sections style */
 @import url('./header.css');
 @import url('./vite-promo.css');
-@import url('./badges.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+
+.task{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input{
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.input input{
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  font-size: 18px;
+  font-family: inherit;
+  color: #242424;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+}
+
+.input input:focus{
+  border-color: #242424;
+}
+
+.input button{
+  padding: 0 24px;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 500;
+  color: #242424;
+  background-color: #ffffff;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.input button:hover:not(:disabled){
+  background-color: #f0f0f0;
+}
+
+.input button:active:not(:disabled){
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.input button:disabled{
+  color: #b3b3b3;
+  background-color: #f0f0f0;
+  border-color: #d0d0d0;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.timer{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.field span.value{
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.field span.label{
+  font-size: 12px;
+  font-weight: 500;
+  color: #808080;
+  text-transform: uppercase;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+
+.form label{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.form input[type='number']{
+  padding: 10px 14px;
+  font-size: 18px;
+  font-family: inherit;
+  color: #242424;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form input[type='number']:focus{
+  border-color: #242424;
+}
+
+.form fieldset{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 20px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.form fieldset legend{
+  padding: 0 8px;
+  font-size: 20px;
+}
+
+.form fieldset label{
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.form fieldset input[type='radio']{
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #242424;
+}
+
+.form button{
+  padding: 12px 24px;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 500;
+  color: #242424;
+  background-color: #f0f0f0;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:hover:not(:disabled){
+  background-color: #e4e4e4;
+}
+
+.form button:active:not(:disabled){
+  background-color: #d8d8d8;
+}
+
+.iziToast.app-toast{
+  width: 100%;
+  max-width: 400px;
+}
+
